@@ -8,33 +8,25 @@ public class ContaTerminal {
         String nomeCliente;
         double saldo;
 
-       //TODO: "Conhecer e importar a classe Scanner"
-
-       Scanner scanner = new Scanner(System.in);
+        Scanner tec = new Scanner(System.in);
        
-       System.out.println("Digite o nome do cliente: ");
-       nomeCliente = scanner.next();
+       System.out.print("Digite o nome do cliente: ");
+       nomeCliente = tec.next();
 
-       System.out.println("Digite o némero da agência com o dígito: ");
-       agencia = scanner.next();
+       System.out.print("Digite o número da agência com o dígito: ");
+       agencia = tec.next();
 
-       System.out.println("Digite o número da conta: ");
-       contaNumero = scanner.nextInt();
+       System.out.print("Digite o número da conta: ");
+       contaNumero = tec.nextInt();
 
-       System.out.println("Digite o saldo da conta: ");
-       saldo = scanner.nextDouble();
+       System.out.print("Digite o saldo da conta: ");
+       saldo = tec.nextDouble();
+       System.out.println();
 
-       System.out.println("Olá Sr(a) " + nomeCliente + ", obrigado por criar uma conta em nosso banco, sua agência é" + agencia + ", conta " + contaNumero + "e seu saldo " + saldo + " já está disponível para saque" );
+       System.out.printf("Olá Sr(a) %s, obrigado por criar uma conta em nosso banco, sua agência é %s, conta %d e seu saldo %.2f já está disponível para saque",  nomeCliente, agencia, contaNumero, saldo);
 
-       //Exibir as mensagens para nosso usuário
+       tec.close();
 
-
-
-
-       //Obter pela classe Scanner os valor digitados no terminal
-
-
-       //Exibir a mensagem da conta criada
-
+      
     }
 }
